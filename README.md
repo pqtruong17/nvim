@@ -6,13 +6,13 @@ Make sure to follow this [guide](https://github.com/bycloudai/InstallVSBuildTool
 ## debugger cmd for c
 
 ```
-clang -debug <filename>.c -o filename
+clang -g <filename>.c -o filename
 ```
 
 
 ## debugger cmd for c++
 
 ```
-clang++ -debug <filename>.c -o filename
+clang++ -g <filename>.c -o filename
 ```
 
