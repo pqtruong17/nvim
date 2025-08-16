@@ -1,4 +1,9 @@
 vim.g.mapleader = " "
+vim.opt.expandtab=true
+vim.opt.tabstop=2
+vim.opt.softtabstop=2
+vim.opt.shiftwidth=2
+vim.opt.relativenumber=true
 
 -- stdpath("config"): /home/[userID]/.config 
 local config_path = vim.fn.stdpath("config")
