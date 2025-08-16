@@ -1,3 +1,5 @@
+vim.g.mapleader = " "
+
 -- stdpath("config"): /home/[userID]/.config 
 local config_path = vim.fn.stdpath("config")
 -- [string1] .. [string2] 
