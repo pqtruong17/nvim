@@ -1,3 +1,6 @@
+-- vim.cmd[[set completeopt +=menuone, noselect, popup]] 
+vim.opt.completeopt  = {'menuone', 'noselect'}
+
 function _G.cleverTab()
   local col = vim.fn.col('.')-1
   local line = vim.fn.getline('.')
@@ -15,13 +18,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(args)
     local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
     if client:supports_method('textDocument/completion') then
-      vim.lsp.completion.enable(true, client.id, args.buf, {
-        autotrigger = false,
-        convert = function(item)
-          return { abbr = item.label:gsub('%b()', '')}
-        end,
-        vim.keymap.set('i', '<c-space>', function() vim.lsp.completion.get() end)
-      })
+      vim.lsp.completion.enable(true, client.id, args.buf, {autotrigger = false})
+      vim.keymap.set('i', '<c-space>', function() vim.lsp.completion.get() end, {buffer = args.buf, noremap = true})
     end
     -- local log_path = vim.fn.getcwd() .. "/test.log"
     -- local log_file = io.open(log_path, "w")
