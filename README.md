@@ -5,8 +5,8 @@ git clone -b linux https://github.com/pqtruong17/nvim ~/.config/nvim
 
 ## iostream is not found
 
-# Check for the selected GCC installation
-'''sh
+### Check for the selected GCC installation
+```sh
 clang++ -v
 _Ubuntu clang version 18.1.3 (1ubuntu1)
 Target: x86_64-pc-linux-gnu
@@ -21,13 +21,12 @@ Selected GCC installation: /usr/bin/../lib/gcc/x86_64-linux-gnu/14
 Candidate multilib: .;@m64
 Selected multilib: .;@m64
 Found CUDA installation: /usr/lib/cuda, version 12.0
-'''
+```
 
-# Mine is libstdc++-14-dev as shown above
-
-'''sh
+### Mine is libstdc++-14-dev as shown above
+```sh
 sudo apt install libstdc++-14-dev
-'''
+```
 
 ## python3 failed with exit code 1 and signal 0
 ```sh
